@@ -7,4 +7,4 @@ plotly==5.17.0
 simplegeneric==0.8.1
 scipy==1.6.2
 scikit-learn
-
+sklearn
