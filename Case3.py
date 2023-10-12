@@ -4,7 +4,17 @@
 # In[10]:
 
 
+import folium
+from folium.plugins import MarkerCluster
+from streamlit_folium import folium_static
 import pandas as pd
+import plotly.express as px
+import streamlit as st
+import numpy as np
+from sklearn.linear_model import LinearRegression
+import plotly.graph_objects as go
+from scipy.stats import gaussian_kde
+import locale
 
 # Lees het CSV-bestand in als een DataFrame
 Laadpalen_1 = pd.read_csv('Laadpalen.csv')
@@ -31,19 +41,6 @@ df_cleaned['Ended'] = pd.to_datetime(df_cleaned['Ended'], format='%Y-%m-%d %H:%M
 
 
 # In[13]:
-
-
-import folium
-from folium.plugins import MarkerCluster
-from streamlit_folium import folium_static
-import pandas as pd
-import plotly.express as px
-import streamlit as st
-import numpy as np
-from sklearn.linear_model import LinearRegression
-import plotly.graph_objects as go
-from scipy.stats import gaussian_kde
-import locale
 
 
 # Functie om de inleidingspagina weer te geven
